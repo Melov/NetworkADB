@@ -1,0 +1,8 @@
+C:\ADB\Main1\NsEx2\obj\Debug\NsEx2.csprojResolveAssemblyReference.cache
+C:\ADB\Main1\NsEx2\bin\Debug\NsEx2.dll
+C:\ADB\Main1\NsEx2\bin\Debug\NsEx2.pdb
+C:\ADB\Main1\NsEx2\bin\Debug\NsEx2.tlb
+C:\ADB\Main1\NsEx2\bin\Debug\WindowsShell.dll
+C:\ADB\Main1\NsEx2\bin\Debug\WindowsShell.pdb
+C:\ADB\Main1\NsEx2\obj\Debug\NsEx2.dll
+C:\ADB\Main1\NsEx2\obj\Debug\NsEx2.pdb

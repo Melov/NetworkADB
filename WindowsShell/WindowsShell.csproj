@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.0.9466</ProductVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+    <ProjectGuid>{A85D2052-8F09-4F7B-950F-F153AC7F222C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>WindowsShell</AssemblyName>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WindowsShell</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release1\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADB\ADBCommand.cs" />
+    <Compile Include="ADB\ADBRunner.cs" />
+    <Compile Include="ADB\CommandResultHelper.cs" />
+    <Compile Include="ADB\DeviseAddr.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Dialogs\ConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ConnectForm.Designer.cs">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ConsoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ConsoleForm.Designer.cs">
+      <DependentUpon>ConsoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Console\ConsoleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Console\ConsoleControl.designer.cs">
+      <DependentUpon>ConsoleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Console\ConsoleEventArgs.cs" />
+    <Compile Include="Dialogs\Console\Imports.cs" />
+    <Compile Include="Dialogs\Console\KeyMapping.cs" />
+    <Compile Include="Dialogs\Console\ProcessEventArgs.cs" />
+    <Compile Include="Dialogs\Console\ProcessInterface.cs" />
+    <Compile Include="Dialogs\OperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OperationForm.Designer.cs">
+      <DependentUpon>OperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PathLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PermissionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PermissionsForm.Designer.cs">
+      <DependentUpon>PermissionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PreferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PreferencesForm.Designer.cs">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\StringExt.cs" />
+    <Compile Include="Interop\CIDA.cs" />
+    <Compile Include="Interop\ColumnId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ColumnStates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\CommandInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\CommandInfoMasks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\FOLDERFLAGS.cs" />
+    <Compile Include="Interop\FOLDERSETTINGS.cs" />
+    <Compile Include="Interop\FOLDERVIEWMODE.cs" />
+    <Compile Include="Interop\IContextMenu2.cs" />
+    <Compile Include="Interop\IContextMenu3.cs" />
+    <Compile Include="Interop\IDelegateFolder.cs" />
+    <Compile Include="Interop\IDropSource.cs" />
+    <Compile Include="Interop\IExplorerCommandProvider.cs" />
+    <Compile Include="Interop\IExtractImage.cs" />
+    <Compile Include="Interop\IFolderView2.cs" />
+    <Compile Include="Interop\IImageList.cs" />
+    <Compile Include="Interop\IOleWindow.cs" />
+    <Compile Include="Interop\IPersistFile.cs" />
+    <Compile Include="Interop\IPersistFolder2.cs" />
+    <Compile Include="Interop\DeviceAspects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\DrawingStyle.cs" />
+    <Compile Include="Interop\DvTargetDevice.cs" />
+    <Compile Include="Interop\EnumOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ExtractIconFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ExtractIconOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ExtraSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\FileDescriptor.cs" />
+    <Compile Include="Interop\FileDescriptorFlags.cs" />
+    <Compile Include="Interop\FormatEtc.cs" />
+    <Compile Include="Interop\IAdviseSink.cs" />
+    <Compile Include="Interop\IconMarshaler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IContextMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IDataObject.cs" />
+    <Compile Include="Interop\IEnumExtraSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IEnumFormatEtc.cs" />
+    <Compile Include="Interop\IEnumIDList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IEnumStatData.cs" />
+    <Compile Include="Interop\IExtractIcon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IMalloc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IPersist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IPersistFolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IPersistIDList.cs" />
+    <Compile Include="Interop\IQueryInfo.cs" />
+    <Compile Include="Interop\IRemoteComputer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IShellBrowser.cs" />
+    <Compile Include="Interop\IShellExtInit.cs" />
+    <Compile Include="Interop\IShellFolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IShellFolder2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IShellFolderViewCB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\IShellIconOverlayIdentifier.cs" />
+    <Compile Include="Interop\IShellItem.cs" />
+    <Compile Include="Interop\IShellItemArray.cs" />
+    <Compile Include="Interop\IShellView.cs" />
+    <Compile Include="Interop\ItemId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ItemIdList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ItemIdListMarshaler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ItemIdMarshaler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\Malloc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\MenuItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\MenuItemInfoOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\MenuItemStates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\MenuItemTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\MSG.cs" />
+    <Compile Include="Interop\POINT.cs" />
+    <Compile Include="Interop\PointL.cs" />
+    <Compile Include="Interop\PROPERTYKEY.cs" />
+    <Compile Include="Interop\QITIPF.cs" />
+    <Compile Include="Interop\RECT.cs" />
+    <Compile Include="Interop\SBSP.cs" />
+    <Compile Include="Interop\SCHIDS.cs" />
+    <Compile Include="Interop\Shell32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellChangeEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellChangeFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellExecuteInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellExecuteOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellFolderViewCreate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\ShellFolderViewMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\SizeL.cs" />
+    <Compile Include="Interop\StatData.cs" />
+    <Compile Include="Interop\StgMedium.cs" />
+    <Compile Include="Interop\StorageMedia.cs" />
+    <Compile Include="Interop\StrRet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\StrRetType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\SVUIA_STATUS.cs" />
+    <Compile Include="Interop\TBBUTTON.cs" />
+    <Compile Include="Interop\User32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\Win32Window.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\Win32WindowMarshaler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interop\_SVGIO.cs" />
+    <Compile Include="Interop\_SVSIF.cs" />
+    <Compile Include="Nspace\ASSOCIATIONELEMENT.cs" />
+    <Compile Include="Nspace\AssociationType.cs" />
+    <Compile Include="Nspace\AttributeFlags.cs" />
+    <Compile Include="Nspace\Column.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ColumnAlignment.cs" />
+    <Compile Include="Nspace\ColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ColumnFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\CommandStringOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\COMServerAssociationAttribute.cs" />
+    <Compile Include="Nspace\ContextMenuEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ContextMenuImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ContextMenuOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\CustomNamespaceFolderView.cs" />
+    <Compile Include="Nspace\DataItem\DataObjectEx.cs" />
+    <Compile Include="Nspace\DefaultFolderObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\DefaultNamespaceFolderView.cs" />
+    <Compile Include="Nspace\DisplayNameContext.cs" />
+    <Compile Include="Nspace\DragDrop\DataObjectHelper.cs" />
+    <Compile Include="Nspace\DragDrop\DragDropHelper.cs" />
+    <Compile Include="Nspace\DragDrop\GetDropTarget.cs" />
+    <Compile Include="Nspace\DragDrop\IDragSourceHelper.cs" />
+    <Compile Include="Nspace\DragDrop\IDropTarget.cs" />
+    <Compile Include="Nspace\DragDrop\IDropTargetHelper.cs" />
+    <Compile Include="Nspace\DragDrop\MyDropTarget.cs" />
+    <Compile Include="Nspace\DragDrop\Win32Structs.cs" />
+    <Compile Include="Nspace\EnumIdListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ExploreMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ExtractIconImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ExtractImageImpl.cs" />
+    <Compile Include="Nspace\FileObject.cs" />
+    <Compile Include="Nspace\FileSystemManager.cs" />
+    <Compile Include="Nspace\FolderAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\IconUtilities.cs" />
+    <Compile Include="Nspace\Icon\IconHelper.cs" />
+    <Compile Include="Nspace\IdList.cs" />
+    <Compile Include="Nspace\IFolderObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\IShellNamespaceItem.cs" />
+    <Compile Include="Nspace\Link\LinkMayker.cs" />
+    <Compile Include="Nspace\MenuOrderEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\MyFileDataObject.cs" />
+    <Compile Include="Nspace\NameOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\NsExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\NsExtensionAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\NsExtensionRegistrar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\NsTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\PidlManager.cs" />
+    <Compile Include="Nspace\PropertyKey.cs" />
+    <Compile Include="Nspace\PropertyKeyAttribute.cs" />
+    <Compile Include="Nspace\QueryInfoImpl.cs" />
+    <Compile Include="Nspace\SFGAO.cs" />
+    <Compile Include="Nspace\Shell32Icon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ShellDetailColumn.cs" />
+    <Compile Include="Nspace\ShellIcon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ShellId.cs" />
+    <Compile Include="Nspace\ShellMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\ShellNamespaceFolderView.cs" />
+    <Compile Include="Nspace\ShellViewHost.cs" />
+    <Compile Include="Nspace\SHFILEINFO.cs" />
+    <Compile Include="Nspace\StandardPropertyKey.cs" />
+    <Compile Include="Nspace\TargetNameAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nspace\WinError.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerRegistrationManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ConnectForm.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConsoleForm.resx">
+      <DependentUpon>ConsoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Console\ConsoleControl.resx">
+      <DependentUpon>ConsoleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OperationForm.resx">
+      <DependentUpon>OperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PermissionsForm.resx">
+      <DependentUpon>PermissionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PreferencesForm.resx">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connecting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_22103227zfTFHnUE.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_22103227zfTFHnUE %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-dots.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commandline.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

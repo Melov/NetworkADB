@@ -1,0 +1,13 @@
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.csprojResolveAssemblyReference.cache
+C:\ADB\Main1\WindowsShell\obj\Release\Interop.SHDocVw.dll
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.csproj.ResolveComReference.cache
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.Dialogs.ConnectForm.resources
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.Dialogs.ConsoleForm.resources
+C:\ADB\Main1\WindowsShell\obj\Release\ConsoleControl.ConsoleControl.resources
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.Dialogs.OperationForm.resources
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.Dialogs.PreferencesForm.resources
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.Dialogs.ProgressForm.resources
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.Properties.Resources.resources
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.csproj.GenerateResource.Cache
+C:\ADB\Main1\WindowsShell\bin\Release1\WindowsShell.dll
+C:\ADB\Main1\WindowsShell\obj\Release\WindowsShell.dll
